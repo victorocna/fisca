@@ -4,21 +4,29 @@ media_folder: static/images
 public_folder: /images
 logo_url: /logo/fisca-logo-admin.png
 collections:
-  - name: portfolio
-    label: Portfolio
-    folder: content/portfolio
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Date
-        name: date
-        widget: date
-      - label: Body
-        name: body
-        widget: markdown
+  - name: pages
+    label: Pages
+    files:
+      - name: partide-live
+        label: Partide live
+        file: content/partide-live/index.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Editions
+            name: editions
+            widget: list
+            fields:
+              - label: Year
+                name: year
+                widget: string
+              - label: url
+                name: url
+                widget: string
+          - label: Body
+            name: body
+            widget: markdown
   - name: settings
     label: Settings
     editor:

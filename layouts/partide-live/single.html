@@ -1,0 +1,20 @@
+{{ define "main"}}
+<div class="my-8 lg:mx-auto" style="max-width: 1200px;">
+  <h1 class="font-semibold capitalize text-xl mb-4">{{ .Title }}</h1>
+  <div class="relative flex h-screen">
+    {{ $first := true }}
+    {{ range $year, $url := $.Params.Editions }}
+    <div class="tab">
+      <input type="radio" id="tab-{{- $year -}}" name="tab-group-{{- $.Title -}}"
+        {{ if $first }}checked{{ end }}
+      >
+      <label for="tab-{{- $year -}}">{{ $year }}</label>
+      <div class="tab-content w-full pt-4">
+        <iframe src="{{- $url -}}" style="width: 100%; height: 90vh; overflow: hidden;" frameborder="0"></iframe>
+      </div>
+    </div>
+    {{ $first = false }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

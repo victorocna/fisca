@@ -1,0 +1,26 @@
+.tab label {
+  cursor: pointer;
+  background: #eee;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: solid 2px #eee;
+  margin-right: 0.5rem;
+  position: relative;
+  transition: background-color 0.3s linear;
+}
+.tab [type="radio"] {
+  display: none;
+}
+.tab-content {
+  transition: opacity 0.3s linear;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+[type="radio"]:checked ~ label {
+  background: white;
+  border: solid 2px #283891;
+}
+[type="radio"]:checked ~ label ~ .tab-content {
+  opacity: 1;
+}
