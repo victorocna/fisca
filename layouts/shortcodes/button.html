@@ -1,0 +1,25 @@
+{{/*
+  Use this shortcode in markdown content files like so:
+
+  {{< button >}} A bunch of code here {{< /button >}}
+  {{< button href="https://example.com" >}} A bunch of code here {{< /button >}}
+*/}}
+
+<style>
+  .with-bg-transition {
+    background-color: {{ .Site.Params.primaryColor | default "#007b85" }};
+    transition: background-color 500ms;
+  }
+  .with-bg-transition:hover {
+    background-color: {{ .Site.Params.secondaryColor | default "#4252b1" }};
+  }
+</style>
+
+<div class="text-left p-3 pl-0 lg:inline">
+  {{- $href := .Get "href" | default "#" -}}
+  {{- $target := .Get "target" | default "_blank" -}}
+  <a href="{{ $href }}" target="{{ $target }}"
+    class="with-bg-transition text-white py-2 px-4 text-sm">
+    {{- .Inner -}}
+  </a>
+</div>

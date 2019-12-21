@@ -1,0 +1,45 @@
+title = "Fisca | Festivalul International de Sah Cap Aurora"
+theme = "ion"
+languageCode = "ro-RO"
+enableRobotsTXT = true
+
+[params]
+  author = "Victor Ocnarescu"
+  fonts = "https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto&display=swap"
+  sitename = "Fisca"
+  timeframe = "19 - 28 iunie 2020"
+  description = "Festivalul International de Sah Cap Aurora"
+  image = "/logo/fisca-wallpaper.jpg"
+  favicon = "/favicon/favicon.png"
+  analytics = "UA-29967399-1"
+  fontAwesome = true
+  headingFont = "'Libre Baskerville', serif"
+  bodyFont = "'Roboto', sans-serif"
+  teaserText = "Vrei să participi la unul dintre cele mai frumoase festivaluri de șah din România?"
+  teaserButton = "Înscrie-te acum!"
+
+[menu]
+  [[menu.main]]
+    name = "Acasa"
+    url = "/"
+    weight = 100
+  [[menu.main]]
+    name = "Program"
+    url = "/program"
+    weight = 110
+  [[menu.main]]
+    name = "Cazare"
+    url = "/cazare"
+    weight = 120
+  [[menu.main]]
+    name = "Partide LIVE"
+    url = "/partide-live"
+    weight = 130
+  [[menu.main]]
+    name = "Inscriere"
+    url = "/inscriere"
+    weight = 140
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 150

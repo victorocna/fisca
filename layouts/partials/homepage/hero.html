@@ -1,0 +1,19 @@
+<article
+  class="py-4 px-6 h-screen text-center text-gray-700 text-white flex flex-col items-center justify-center"
+  style="background: url(/images/fisca-wallpaper.jpg) center center / cover no-repeat;"
+>
+  {{ with .Site.GetPage "page" "home" }}
+  <div class="fadeInRight animate-me delay-me">
+    <h2 class="text-2xl lg:text-4xl text-white w-full font-light">{{ .Params.H1 }}</h2>
+    <h2 class="text-2xl lg:text-4xl text-white w-full pt-8 lg:pt-0">{{ .Params.H2 }}</h2>
+  </div>
+
+  <div class="flex fadeInRight animate-me delay-me my-8 lg:my-12">
+    {{ range.Params.Buttons }}
+    <a href="{{.url}}" class="text-white text-sm lg:text-lg tracking-wide bg-green py-2 px-4 mx-4 border border-gray-300">
+      <span>{{ .name }}</span>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>

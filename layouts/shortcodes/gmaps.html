@@ -1,0 +1,25 @@
+{{/*
+  Use this shortcode in markdown content files like so:
+
+  {{< gmaps API_KEY="" lat="-25.344" lng="131.036" >}}
+  {{< gmaps API_KEY="" lat="-25.344" lng="131.036" zoom="10" >}}
+*/}}
+
+{{- with .Get "API_KEY" -}}
+{{- $lat := $.Get "lat" | default -25.344 -}}
+{{- $lng := $.Get "lng" | default 131.036 -}}
+{{- $zoom := $.Get "zoom" | default 12 -}}
+
+<div id="gmaps" class="my-8" style="height: 400px; width: 100%"></div>
+<script>
+  // Initialize and add the map
+  function initMap() {
+    var location = { lat: +"{{- $lat -}}", lng: +"{{- $lng -}}" };
+    var map = new google.maps.Map(
+      document.getElementById("gmaps"), { zoom: +"{{- $zoom -}}", center: location, styles: {{- $.Site.Data.gmaps.night -}} }
+    );
+    var marker = new google.maps.Marker({ position: location, map: map });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{.}}&callback=initMap"></script>
+{{- end -}}

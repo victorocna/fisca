@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>{{ .Site.Title }}</title>
+<meta name="description" content="{{ .Site.Params.Description }}">
+
+{{ if .Site.Params.Fonts }}
+  <link rel="stylesheet" href="{{ .Site.Params.Fonts }}">
+{{ end }}
+
+{{ if .Site.Params.Favicon }}
+  <link rel="icon" type="image/png" href="{{ .Site.Params.Favicon }}">
+{{ end }}
+
+{{ if .Site.IsServer }}
+  {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+  {{ if (fileExists "assets/css/local.css") }}
+    {{ $local := resources.Get "css/local.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
+    <link rel="stylesheet" href="{{ $local.Permalink }}">
+  {{ end }}
+{{ else }}
+  {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+  {{ if (fileExists "assets/css/local.css") }}
+    {{ $local := resources.Get "css/local.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $local.Permalink }}" integrity="{{ $local.Data.Integrity }}">
+  {{ end }}
+{{ end }}
+
+{{ if .Site.Params.FontAwesome }}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+{{ end }}

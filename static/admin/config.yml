@@ -1,0 +1,81 @@
+backend:
+  name: test-repo
+media_folder: static/images
+public_folder: /images
+logo_url: /logo/fisca-logo-admin.png
+collections:
+  - name: portfolio
+    label: Portfolio
+    folder: content/portfolio
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Date
+        name: date
+        widget: date
+      - label: Body
+        name: body
+        widget: markdown
+  - name: settings
+    label: Settings
+    editor:
+      preview: false
+    files:
+      - name: settings
+        label: Update your website settings by clicking here
+        file: config.toml
+        fields:
+          - widget: string
+            name: title
+            label: Title
+            required: true
+            hint: Site title
+          - widget: object
+            name: params
+            label: Params
+            required: true
+            hint: Site parameters
+            fields:
+              - widget: string
+                name: analytics
+                label: Google Analytics Code
+                required: false
+  - name: menu
+    label: Menus
+    editor:
+      preview: false
+    files:
+      - name: menu
+        label: Update your website menu by clicking here
+        file: config.toml
+        fields:
+          - widget: object
+            name: menu
+            label: Site Menus
+            required: false
+            hint: Menu items not related to a specific page
+            fields:
+              - widget: list
+                name: main
+                label: Main menu
+                required: false
+                hint: List of items for Main menu
+                fields:
+                  - widget: string
+                    name: name
+                    label: Menu text
+                    required: true
+                  - widget: string
+                    name: url
+                    label: Menu link
+                    required: true
+                  - widget: number
+                    name: weight
+                    label: Menu weight
+                    required: true
+                    hint: >-
+                      A menu item is more important (placed more to the left)
+                      if its weight is smaller

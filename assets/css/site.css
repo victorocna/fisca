@@ -1,0 +1,192 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.animate-me {
+  animation-duration: 1.2s;
+}
+.delay-me {
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.box-technologies p {
+  margin-bottom: 0.75em;
+}
+
+.graph-left,
+.graph-right {
+  position: absolute;
+  top: -100px;
+  left: -20vw;
+  transform: rotate(-40deg);
+}
+.graph-right {
+  left: 20vw;
+  transform: rotate(40deg);
+}
+@media (min-width: 768px) {
+  .graph-left {
+    left: -30vw;
+  }
+  .graph-right {
+    left: 26vw;
+  }
+}
+@media (min-width: 1024px) {
+  .graph-left {
+    left: -40vw;
+  }
+  .graph-right {
+    left: 32vw;
+  }
+}
+
+.fancy-border {
+  position: relative;
+}
+.fancy-border::before,
+.fancy-border::after {
+  width: 60px;
+  left: 50%;
+  top: 10px;
+  margin-left: -80px;
+  border: solid 1px;
+  position: absolute;
+  content: "";
+  transform: scaleY(1.5);
+}
+.fancy-border::after {
+  margin-left: 20px;
+}
+.fancy-border > i {
+  margin-top: -30px;
+}
+
+.bg-primary {
+  background: rgb(38, 6, 51);
+}
+.gradient {
+  background: rgb(0, 0, 0) -webkit-linear-gradient(top, rgba(38, 6, 51) 40%, rgb(236, 97, 93) 100%) repeat
+    scroll 0% 0%;
+}
+.description p {
+  margin-bottom: 1rem;
+}
+.description a {
+  color: rgb(197, 48, 48);
+  text-decoration: underline;
+}
+.description a.text-white {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hover-scale .hover-target {
+  transform: scale(1);
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+}
+.hover-scale:hover .hover-target {
+  transform: scale(1.2);
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+}
+.hover-scale:hover img.hover-target {
+  opacity: 0.9;
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+.nav-menu label {
+  width: 2em;
+  margin: 2px;
+  text-indent: -9999px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.nav-menu input {
+  width: 32px;
+  height: 26px;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+.nav-menu input:checked + ul {
+  transform: translateX(0%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.nav-menu input:checked + ul > li {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.nav-menu ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100vh;
+  width: 15em;
+  list-style: none;
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+  text-indent: 0;
+  box-shadow: 0 0 30px transparent;
+}
+.nav-menu ul > li {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease 0.05s;
+}
+.nav-menu ul > li > a {
+  padding: 0.75em 0;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+@media (min-width: 1024px) {
+  .nav-menu label {
+    width: auto;
+    margin: 0;
+  }
+  .nav-menu ul {
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+  .nav-menu ul,
+  .nav-menu ul > li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .nav-menu ul > li:last-child {
+    padding-right: 0;
+  }
+
+  .nav-menu a .menu-text {
+    position: relative;
+  }
+  .nav-menu a:hover .menu-text::before {
+    animation: bounceInDown 0.8s;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+    bottom: -6px;
+    height: 2px;
+    background: #f3615a;
+    width: 100%;
+    content: "";
+  }
+}
+
+.bounce.bounce i {
+  line-height: 1rem;
+}
+@media (min-width: 1024px) {
+  .bounce.bounce i {
+    line-height: 1.5rem;
+  }
+}

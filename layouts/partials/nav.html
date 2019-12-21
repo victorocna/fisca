@@ -1,0 +1,42 @@
+<header class="bg-blue w-full p-4 sticky top-0 flex justify-between items-center z-50">
+  <div class="w-full lg:mx-auto flex justify-between items-center" style="max-width: 1200px;">
+    <a href="/" class="flex items-center">
+      <img src="/logo/fisca-logo.png" alt="Fisca Logo" class="w-12 h-12" />
+      <h1 class="text-white px-2 font-display text-xl">{{ .Site.Params.Sitename }}</h1>
+    </a>
+    <nav class="nav-menu inline-block">
+      <label class="block">
+        <input type="checkbox" id="menu" class="lg:hidden" aria-label="Menu open/close" />
+
+        {{ partial "menu-list.html" . }}
+      </label>
+    </nav>
+    <button
+      class="lg:hidden text-white flex items-center rounded-full border-2 py-1 px-2"
+      onclick="openMenu()" aria-label="Open menu" id="menubutton" style="outline: 0;"
+    >
+      <i class="fas fa-bars w-8 text-xl" id="menuicon"></i>
+      Menu
+    </button>
+  </div>
+</header>
+
+<script type="text/javascript">
+  function openMenu() {
+    document.getElementById("menu").checked = !document.getElementById("menu").checked
+    document.addEventListener("click", outsideClickListener)
+  }
+  function closeMenu() {
+    document.getElementById("menu").checked = false
+  }
+
+  function outsideClickListener(event) {
+    if (!["menubutton", "menulist", "menuicon", "menu"].includes(event.target.id) && document.getElementById("menu").checked) {
+      removeClickListener()
+      closeMenu()
+    }
+  }
+  function removeClickListener() {
+    document.removeEventListener("click", outsideClickListener)
+  }
+</script>
