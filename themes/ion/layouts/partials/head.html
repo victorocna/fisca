@@ -5,8 +5,8 @@
 <title>{{ .Site.Title }}</title>
 <meta name="description" content="{{ .Site.Params.Description }}">
 
-{{ if .Site.Params.Fonts }}
-  <link rel="stylesheet" href="{{ .Site.Params.Fonts }}">
+{{ if .Site.Params.fonts.url }}
+  <link rel="stylesheet" href="{{ .Site.Params.fonts.url }}">
 {{ end }}
 
 {{ if .Site.Params.Favicon }}

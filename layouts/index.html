@@ -1,5 +1,23 @@
 {{ define "main" }}
-<main aria-role="main" class="flex-1">
-  {{ partial "hero.html" . }}
-</main>
+<article
+  class="py-4 px-6 h-screen text-center text-gray-700 text-white flex flex-col items-center justify-center"
+  style="background: url(/images/fisca-wallpaper.jpg) center center / cover no-repeat;"
+>
+  <div class="flex flex-col fadeInRight animate-me delay-me">
+    <h2 class="text-2xl lg:text-4xl font-light font-display">
+      <span class="bg-white text-black p-1">{{ .Site.Params.description }}</span>
+    </h2>
+    <h3 class="text-2xl lg:text-4xl mt-4 font-display">
+      <span class="bg-white text-black p-1">{{ .Site.Params.timeframe }}</span>
+    </h3>
+  </div>
+
+  <div class="flex flex-col lg:flex-row fadeInRight animate-me delay-me my-8 lg:my-12">
+    {{ range .Params.Buttons }}
+    <a href="{{.url}}" class="bg-yellow rounded-full text-black text-sm lg:text-lg tracking-wide bg-green py-2 px-4 mb-4 lg:mr-4">
+      <span>{{ .name }}</span>
+    </a>
+    {{ end }}
+  </div>
+</article>
 {{ end }}

@@ -8,7 +8,7 @@ module.exports = {
       },
       fontFamily: {
         display: ["Libre Baskerville", "serif"],
-        body: ["Roboto", "sans-serif"],
+        body: ["Open Sans", "sans-serif"],
       },
     },
   },

@@ -3,13 +3,12 @@
 
 <head>
   {{ partial "head.html" . }}
-  {{ partial "typography.html" . }}
   {{ partial "og.html" . }}
 </head>
 
-<body class="flex flex-col min-h-screen">
-  {{ partial "nav.html" . }}
-  <main class="flex-1">
+<body class="flex flex-col min-h-screen font-body">
+  {{ partial "header.html" . }}
+  <main aria-role="main" class="flex-1">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}

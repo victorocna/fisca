@@ -1,19 +1,28 @@
 author = "Victor Ocnarescu"
-fonts = "https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto&display=swap"
 sitename = "Fisca"
 timeframe = "19 - 28 iunie 2020"
-description = "Festivalul International de Sah Cap Aurora"
+description = "Festivalul Internațional de Șah Cap Aurora"
 image = "/logo/fisca-wallpaper.jpg"
 favicon = "/favicon/favicon.png"
 analytics = "UA-29967399-1"
 fontAwesome = true
-headingFont = "'Libre Baskerville', serif"
-bodyFont = "'Roboto', sans-serif"
+[fonts]
+  display = "'Libre Baskerville', serif"
+  body = "'Open Sans', sans-serif"
+  url = "https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans&display=swap"
 [teaser]
   text = "Vrei să participi la unul dintre cele mai frumoase festivaluri de șah din România?"
   button = "Înscrie-te acum!"
   url = "/inscriere"
 [[sponsors]]
   name = "Gerroma"
+  image = "/images/gerroma-logo.jpg"
 [[sponsors]]
   name = "Chipita"
+  image = "/images/chipita-logo.jpg"
+[[sponsors]]
+  name = "Raiffeisen Bank"
+  image = "/images/raiffeisen-bank-logo.jpg"
+[[sponsors]]
+  name = "Oscar Downstream"
+  image = "/images/oscar-downstream-logo.jpg"
