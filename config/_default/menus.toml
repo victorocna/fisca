@@ -1,5 +1,5 @@
 [[main]]
-  name = "Acasa"
+  name = "Acasă"
   url = "/"
   weight = 100
 [[main]]
@@ -15,10 +15,14 @@
   url = "/partide-live"
   weight = 130
 [[main]]
-  name = "Inscriere"
+  name = "Înscriere"
   url = "/inscriere"
+  weight = 140
+[[main]]
+  name = "Rezultate"
+  url = "/rezultate"
   weight = 140
 [[main]]
   name = "Contact"
   url = "/contact"
-  weight = 150
+  weight = 160

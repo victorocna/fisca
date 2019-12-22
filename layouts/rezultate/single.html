@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="px-4 py-20" style="background: url('{{ .Params.image }}') center center / cover no-repeat">
+  <div class="flex py-8 lg:mx-auto" style="max-width: 1200px;">
+    <h2 class="bg-white px-1 text-2xl font-display font-semibold">{{ .Title }}</h2>
+  </div>
+</div>
+
+<div class="px-4 py-8">
+  <div class="lg:flex lg:flex-col lg:mx-auto" style="max-width: 1200px;">
+    <div class="text-sm lg:text-normal mb-8">
+      {{ .Content }}
+    </div>
+    <div class="relative flex w-full">
+      {{ $first := true }}
+      {{ range $edition := $.Params.Editions }}
+      <div class="tab">
+        <input type="radio" id="tab-{{- $edition.year -}}" name="tab-group-{{- $.Title -}}"
+          {{ if $first }}checked{{ end }}
+        >
+        <label for="tab-{{- $edition.year -}}">{{ $edition.year }}</label>
+        <div class="tab-content w-full flex flex-col pt-8">
+          {{ range $tournament := $edition.tournaments }}
+          <div class="flex mb-4">
+            <a href="{{ $tournament.url }}" target="_blank" rel="noopener noreferrer" class="capitalize bg-yellow text-black py-2 px-4 rounded-full">
+              <span>{{ $tournament.name }}</span>
+              <i class="fas fa-angle-double-right"></i>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ $first = false }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

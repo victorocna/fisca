@@ -1,0 +1,28 @@
+.content {
+  font-weight: 300;
+  line-height: 1.625em;
+  padding-right: 1rem;
+}
+.content h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+}
+.content strong {
+  font-weight: 600;
+}
+.content ul {
+  list-style: none;
+  margin-left: 1.5rem;
+}
+.content p {
+  margin-bottom: .5rem;
+}
+.content li {
+  margin-bottom: 0.25rem;
+}
+.content li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f35a";
+  margin: 0 0.5rem 0 -1.5rem;
+}
