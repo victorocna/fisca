@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
-<head>
-  {{ partial "head.html" . }}
-  {{ partial "typography.html" . }}
-  {{ partial "og.html" . }}
-</head>
-
-<body class="flex flex-col min-h-screen">
-  <main class="flex-1">
-    <article class="text-center text-gray-700">
-      {{ partial "nav.html" . }}
-    </article>
-  </main>
-  {{ partial "footer.html" . }}
-</body>
-
-</html>
+{{ define "main" }}
+<main aria-role="main" class="flex-1">
+  {{ partial "hero.html" . }}
+</main>
+{{ end }}

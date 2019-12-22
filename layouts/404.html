@@ -1,7 +1,23 @@
-{{ define "main"}}
-<main id="main">
-  <div>
-    <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-  </div>
-</main>
-{{ end }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{ partial "head.html" . }}
+  {{ partial "typography.html" . }}
+  {{ partial "og.html" . }}
+</head>
+
+<body class="flex flex-col min-h-screen font-body">
+  <main aria-role="main" class="flex flex-1 flex-col justify-center items-center bg-blue text-white p-4">
+    <img src="/logo/fisca-logo.png" alt="Fisca Logo" class="w-24 h-24 mb-2" />
+    <h1 class="text-xl lg:text-2xl font-display text-center mb-2">
+      <a href="{{ "/" | relURL }}">{{ .Site.Params.description }}</a>
+    </h1>
+    <h2 class="text-normal lg:text-xl font-display text-center mb-2">Eroare 404! Pagina nu a fost găsită</h2>
+    <div class="text-normal lg:text-lg mt-4">
+      <a class="bg-yellow text-black py-2 px-4 rounded-full" href="/">Înapoi la prima pagină</a>
+    </div>
+  </main>
+</body>
+
+</html>
