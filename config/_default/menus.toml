@@ -1,0 +1,24 @@
+[[main]]
+  name = "Acasa"
+  url = "/"
+  weight = 100
+[[main]]
+  name = "Program"
+  url = "/program"
+  weight = 110
+[[main]]
+  name = "Cazare"
+  url = "/cazare"
+  weight = 120
+[[main]]
+  name = "Partide LIVE"
+  url = "/partide-live"
+  weight = 130
+[[main]]
+  name = "Inscriere"
+  url = "/inscriere"
+  weight = 140
+[[main]]
+  name = "Contact"
+  url = "/contact"
+  weight = 150
