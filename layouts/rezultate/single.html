@@ -10,26 +10,21 @@
     <div class="text-sm lg:text-normal mb-8">
       {{ .Content }}
     </div>
-    <div class="relative flex w-full">
-      {{ $first := true }}
-      {{ range $edition := $.Params.Editions }}
-      <div class="tab">
-        <input type="radio" id="tab-{{- $edition.year -}}" name="tab-group-{{- $.Title -}}"
-          {{ if $first }}checked{{ end }}
-        >
-        <label for="tab-{{- $edition.year -}}">{{ $edition.year }}</label>
-        <div class="tab-content w-full flex flex-col pt-8">
-          {{ range $tournament := $edition.tournaments }}
-          <div class="flex mb-4">
-            <a href="{{ $tournament.url }}" target="_blank" rel="noopener noreferrer" class="capitalize bg-yellow text-black py-2 px-4 rounded-full">
-              <span>{{ $tournament.name }}</span>
-              <i class="fas fa-angle-double-right"></i>
-            </a>
-          </div>
-          {{ end }}
+
+    <div class="tabbed">
+      {{ range $i, $edition := $.Params.Editions }}
+      <input type="radio" id="tabbed-{{ $edition.year }}" name="tabbed" {{ if eq $i 0 }}checked{{ end }}>
+      <label for="tabbed-{{ $edition.year }}" class="cursor-pointer p-2 mr-2 rounded-full">{{ $edition.year }}</label>
+      <div class="animated fadeIn 1s my-4">
+        {{ range $tournament := $edition.tournaments }}
+        <div class="flex mb-4">
+          <a href="{{ $tournament.url }}" target="_blank" rel="noopener noreferrer" class="capitalize bg-yellow text-sm text-black py-2 px-4 rounded-full">
+            <span>{{ $tournament.name }}</span>
+            <i class="fas fa-angle-double-right"></i>
+          </a>
         </div>
+        {{ end }}
       </div>
-      {{ $first = false }}
       {{ end }}
     </div>
   </div>

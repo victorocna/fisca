@@ -1,22 +1,10 @@
 ---
-title: Trageri la sorți și rezultate
+title: Rezultate
 type: rezultate
 date: 2019-12-21
 image: /images/fisca-rezultate.jpg
 editions:
   - year: 2019
-    tournaments:
-      - name: Turneul Piticot
-        url: https://chess-results.com/tnr357945.aspx
-      - name: Turneul A - Copii sub 8 ani
-        url: https://chess-results.com/tnr357944.aspx
-      - name: Turneul B - Copii sub 10 ani
-        url: https://chess-results.com/tnr357943.aspx
-      - name: Turneul C - Copii sub 14 ani
-        url: https://chess-results.com/tnr357942.aspx
-      - name: Turneul D - Open internațional
-        url: https://chess-results.com/tnr357941.aspx
-  - year: 2018
     tournaments:
       - name: Turneul Piticot
         url: https://chess-results.com/tnr443096.aspx
@@ -28,6 +16,18 @@ editions:
         url: https://chess-results.com/tnr443094.aspx
       - name: Turneul D - Open internațional
         url: https://chess-results.com/tnr443095.aspx
+  - year: 2018
+    tournaments:
+      - name: Turneul Piticot
+        url: https://chess-results.com/tnr357945.aspx
+      - name: Turneul A - Copii sub 8 ani
+        url: https://chess-results.com/tnr357944.aspx
+      - name: Turneul B - Copii sub 10 ani
+        url: https://chess-results.com/tnr357943.aspx
+      - name: Turneul C - Copii sub 14 ani
+        url: https://chess-results.com/tnr357942.aspx
+      - name: Turneul D - Open internațional
+        url: https://chess-results.com/tnr357941.aspx
   - year: 2017
     tournaments:
       - name: Turneul Piticot
