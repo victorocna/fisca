@@ -1,19 +1,13 @@
 {{ define "main"}}
 <div class="px-4 my-8 lg:mx-auto" style="max-width: 1200px;">
   <h1 class="font-semibold capitalize text-xl mb-4">{{ .Title }}</h1>
-  <div class="relative flex h-screen">
-    {{ $first := true }}
-    {{ range $edition := $.Params.Editions }}
-    <div class="tab">
-      <input type="radio" id="tab-{{- $edition.year -}}" name="tab-group-{{- $.Title -}}"
-        {{ if $first }}checked{{ end }}
-      >
-      <label for="tab-{{- $edition.year -}}">{{ $edition.year }}</label>
-      <div class="tab-content w-full pt-4">
-        <iframe src="{{- $edition.url -}}" style="width: 100%; height: 90vh; overflow: hidden;" frameborder="0"></iframe>
-      </div>
+  <div class="tabbed lg:bg-gray-200 lg:p-4">
+    {{ range $i, $edition := $.Params.Editions }}
+    <input type="radio" id="tabbed-{{- $edition.year -}}" name="tabbed" {{ if eq $i 0 }}checked{{ end }}>
+    <label for="tabbed-{{- $edition.year -}}" class="cursor-pointer p-2 mr-2 rounded-full">{{ $edition.year }}</label>
+    <div class="animated fadeIn 1s my-4">
+      <iframe src="{{- $edition.url -}}" style="width: 100%; height: 90vh; overflow: hidden;" frameborder="0"></iframe>
     </div>
-    {{ $first = false }}
     {{ end }}
   </div>
 </div>

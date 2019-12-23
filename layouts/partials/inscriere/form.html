@@ -1,0 +1,25 @@
+<form id="contact-form" method="POST" class="mb-4">
+  <input type="text" name="name" aria-label="Name"
+    class="w-full px-4 py-2 mb-4 border border-gray-500 text-gray-800 focus:text-gray-900 focus:border-green-500"
+    placeholder="Nume și prenume" required />
+  <input type="email" name="from" aria-label="Email"
+    class="w-full px-4 py-2 mb-4 border border-gray-500 text-gray-800 focus:text-gray-900 focus:border-green-500"
+    placeholder="Adresă de email" required />
+  <select class="w-full px-4 py-2 mb-4 border border-gray-500 text-gray-800 focus:text-gray-900 focus:border-green-500">
+    <option value="" selected>Alege turneul principal</option>
+    <option value="Piticot">Turneu Piticot - Copii sub 6 ani</option>
+    <option value="A">Turneu A - Copii sub 8 ani</option>
+    <option value="B">Turneu B - Copii sub 10 ani</option>
+    <option value="C">Turneu C - Copii sub 14 ani</option>
+    <option value="D">Turneu D - Open internațional</option>
+  </select>
+  <textarea name="message" aria-label="Message"
+    class="w-full px-4 py-2 mb-4 border border-gray-500 text-gray-800 focus:text-gray-900 focus:border-green-500"
+    rows="3" placeholder="Mesaj, observații, note"></textarea>
+  <input type="text" name="ascuns" id="ascuns" class="hidden" />
+  <div class="flex flex-row items-center">
+    <button id="submit" type="submit" class="bg-blue text-white text-base py-2 px-4 mr-4" style="min-width: 140px">Trimite</button>
+    <div id="success" class="hidden text-green text-sm">Mesajul a fost trimis cu succes. Vă mulțumim!</div>
+    <div id="error" class="hidden text-blue text-sm">A apărut o eroare în trimiterea mesajului. Te rugăm să încerci din nou</div>
+  </div>
+</form>
