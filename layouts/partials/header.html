@@ -1,18 +1,18 @@
-<header class="bg-blue w-full p-4 sticky top-0 flex justify-between items-center z-50">
+<header class="w-full p-4 flex justify-between items-center z-50">
   <div class="w-full lg:mx-auto flex justify-between items-center" style="max-width: 1200px;">
     <a href="/" class="flex items-center">
-      <img src="/logo/fisca-logo.png" alt="Fisca Logo" class="w-12 h-12" />
-      <h1 class="text-white px-2 font-display text-xl">{{ .Site.Params.Sitename }}</h1>
+      <img src="/logo/fisca-logo.png" alt="Fisca Logo" class="w-16 h-16" />
+      <div class="flex flex-col">
+        <h1 class="text-blue px-2 font-display text-xl uppercase">{{ .Site.Params.Sitename }}</h1>
+        <h2 class="hidden lg:block text-blue px-2 font-display text-sm">{{ .Site.Params.description }}</h2>
+      </div>
     </a>
     <nav class="nav-menu inline-block">
-      <label class="block">
-        <input type="checkbox" id="menu" class="lg:hidden" aria-label="Menu open/close" />
-
-        {{ partial "menu-list.html" . }}
-      </label>
+      <input type="checkbox" id="menu" class="hidden" aria-label="Menu open/close" />
+      {{ partial "menu-list.html" . }}
     </nav>
     <button
-      class="lg:hidden text-white flex items-center rounded-full border-2 py-1 px-2"
+      class="lg:hidden text-blue flex items-center rounded-full border-2 py-1 px-2"
       onclick="openMenu()" aria-label="Open menu" id="menubutton" style="outline: 0;"
     >
       <i class="fas fa-bars w-8 text-xl" id="menuicon"></i>

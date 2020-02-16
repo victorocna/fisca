@@ -1,25 +1,30 @@
 {{ define "main" }}
-<div class="px-4 py-20" style="background: url('{{ .Params.image }}') center center / cover no-repeat">
-  <div class="flex py-8 lg:mx-auto" style="max-width: 1200px;">
-    <h2 class="bg-white px-1 text-2xl font-display font-semibold">{{ .Title }}</h2>
+<div
+  class="px-4 border-bleu border-t-4 main-image"
+  style="background: url('{{ .Params.image }}') center center / cover no-repeat"
+>
+  <div class="flex py-8 lg:mx-auto" style="max-width: 1200px;"></div>
+</div>
+
+<div class="px-4 py-4">
+  <div class="flex lg:mx-auto" style="max-width: 1200px;">
+    <h2 class="text-blue px-1 text-2xl font-display font-semibold">{{ .Title }}</h2>
   </div>
 </div>
 
-<div class="px-4 py-8">
+<div class="px-4 py-4">
   <div class="lg:flex lg:flex-col lg:mx-auto" style="max-width: 1200px;">
-    <div class="text-sm lg:text-normal mb-8">
-      <time datetime="2014-09-20" class="icon border border-gray-300 my-2">
-        <em>Vineri</em>
-        <strong class="bg-blue text-white">Iunie</strong>
-        <span>21</span>
-      </time>
-
-      <time datetime="2014-09-20" class="icon border border-gray-300 my-2">
-        <em>Sâmbătă</em>
-        <strong class="bg-blue text-white">Iunie</strong>
-        <span>22</span>
-      </time>
+    <div class="hidden lg:block bg-blue text-white py-3 text-center font-bold">
+      Programul turneelor FISCA
     </div>
+    {{ range $tournament := .Params.tournaments }}
+    <div class="flex flex-col lg:flex-row">
+      <div class="w-full lg:w-1/4 bg-blue lg:bg-white text-white lg:text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r">{{ $tournament.name }}</div>
+      <div class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r">{{ $tournament.type }}</div>
+      <div class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r">{{ $tournament.rounds }}</div>
+      <div class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b">{{ $tournament.time }}</div>
+    </div>
+    {{ end }}
   </div>
 </div>
 {{ end }}

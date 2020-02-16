@@ -1,0 +1,76 @@
+.nav-menu input {
+  width: 32px;
+  height: 26px;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+.nav-menu input:checked + ul {
+  transform: translateX(0%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.nav-menu input:checked + ul > li {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.nav-menu ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100vh;
+  width: 15em;
+  list-style: none;
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+  text-indent: 0;
+  box-shadow: 0 0 30px transparent;
+}
+.nav-menu ul > li {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease 0.05s;
+}
+.nav-menu ul > li > a {
+  padding: 0.75em 0;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+@media (min-width: 1024px) {
+  .nav-menu input:checked + ul {
+    box-shadow: none;
+  }
+  .nav-menu ul {
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+  .nav-menu ul,
+  .nav-menu ul > li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .nav-menu ul > li:last-child {
+    padding-right: 0;
+  }
+
+  .nav-menu a .menu-text {
+    position: relative;
+  }
+  .nav-menu a:hover .menu-text::before {
+    animation: bounceInDown 0.8s;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+    bottom: -6px;
+    height: 2px;
+    background: #f3615a;
+    width: 100%;
+    content: "";
+  }
+}

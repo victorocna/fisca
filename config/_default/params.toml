@@ -26,3 +26,9 @@ fontAwesome = true
 [[sponsors]]
   name = "Oscar Downstream"
   image = "/images/oscar-downstream-logo.jpg"
+[[icons]]
+  icon = "fab fa-facebook-f"
+  url = "https://www.facebook.com/FISCA.Romania/"
+[[icons]]
+  icon = "fab fa-instagram"
+  url = "https://www.instagram.com/fisca_chess/"
