@@ -5,10 +5,23 @@
     </button>
   </li>
   {{ range .Site.Menus.main }}
-  <li class="border-gray-200 px-4 border-b border-gray-200 lg:border-0">
+  {{ if .HasChildren }}
+  <li class="border-gray-200 px-4 border-b border-gray-200 lg:border-0 lg:font-bold hover:text-yellow">
+    <span>{{ .Name }}</span>
+  </li>
+  <ul class="sub-menu hidden">
+    {{ range .Children }}
+    <li class="">
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <li class="border-gray-200 px-4 border-b border-gray-200 lg:border-0 lg:font-bold hover:text-yellow">
     <a href="{{.URL}}" class="block lg:inline">
       <span class="menu-text">{{ .Name }}</span>
     </a>
   </li>
+  {{ end }}
   {{ end }}
 </ul>

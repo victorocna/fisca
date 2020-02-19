@@ -3,7 +3,7 @@ title: Contact
 subtitle: Cum ajungi la FISCA?
 type: contact
 date: 2019-12-21
-image: /images/fisca-sala-de-joc.jpg
+image: /images/fisca-turneu-sah-tandem.jpg
 ---
 
 Ai intrebări? Ne poți contacta prin formularul de mai jos.

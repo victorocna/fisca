@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div
-  class="px-4 border-bleu border-t-4 main-image"
+  class="px-4 border-bleu border-t-4 border-b-4 main-image"
   style="background: url('{{ .Params.image }}') center center / cover no-repeat"
 >
   <div class="flex py-8 lg:mx-auto" style="max-width: 1200px;"></div>
@@ -8,7 +8,7 @@
 
 <div class="px-4 py-4">
   <div class="flex lg:mx-auto" style="max-width: 1200px;">
-    <h2 class="text-blue px-1 text-2xl font-display font-semibold">{{ .Title }}</h2>
+    <h2 class="text-blue text-2xl font-display font-semibold">{{ .Title }}</h2>
   </div>
 </div>
 
@@ -20,24 +20,56 @@
       </div>
       <div class="flex">
         <div class="w-1/2 text-sm">
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 1</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 2</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 3</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 4</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 5</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 6</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 7</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 8</div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 1
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 2
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 3
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 4
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 5
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 6
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 7
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 8
+          </div>
         </div>
         <div class="w-1/2 text-sm">
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">2500 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">1500 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">1000 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">800 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">600 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">400 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">200 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">150 Lei</div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            2500 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            1500 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            1000 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            800 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            600 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            400 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            200 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            150 Lei
+          </div>
         </div>
       </div>
     </div>
@@ -47,14 +79,26 @@
       </div>
       <div class="flex">
         <div class="w-1/2 text-sm">
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 1</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 2</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">Locul 3</div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 1
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 2
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            Locul 3
+          </div>
         </div>
         <div class="w-1/2 text-sm">
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">500 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">350 Lei</div>
-          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">200 Lei</div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            500 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            350 Lei
+          </div>
+          <div class="bg-white w-full px-4 py-2 text-center border-gray-300 border-b border-r">
+            200 Lei
+          </div>
         </div>
       </div>
     </div>

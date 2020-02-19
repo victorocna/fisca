@@ -4,7 +4,7 @@ module.exports = {
       colors: {
         blue: "#283891",
         bleu: "#0f75bc",
-        yellow: "#ffde00",
+        yellow: "#f89d35",
       },
       fontFamily: {
         display: ["Libre Baskerville", "serif"],

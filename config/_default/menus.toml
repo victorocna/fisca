@@ -12,16 +12,44 @@
   weight = 120
 [[main]]
   name = "Partide LIVE"
-  url = "/partide-live"
+  identifier = "live"
   weight = 130
+[[main]]
+  name = "Partide live chess24.com"
+  parent = "live"
+  url = "#"
+[[main]]
+  name = "Partide live followchess.com"
+  parent = "live"
+  url = "#"
 [[main]]
   name = "Înscriere"
   url = "/inscriere"
   weight = 140
 [[main]]
   name = "Rezultate"
-  url = "/rezultate"
+  identifier = "rezultate"
   weight = 140
+[[main]]
+  name = "Rezultate Turneu Piticot"
+  parent = "rezultate"
+  url = "https://chess-results.com/tnr443096.aspx"
+[[main]]
+  name = "Rezultate Turneu A"
+  parent = "rezultate"
+  url = "https://chess-results.com/tnr443092.aspx"
+[[main]]
+  name = "Rezultate Turneu B"
+  parent = "rezultate"
+  url = "https://chess-results.com/tnr443093.aspx"
+[[main]]
+  name = "Rezultate Turneu C"
+  parent = "rezultate"
+  url = "https://chess-results.com/tnr443094.aspx"
+[[main]]
+  name = "Rezultate Turneu D"
+  parent = "rezultate"
+  url = "https://chess-results.com/tnr443095.aspx"
 [[main]]
   name = "Contact"
   url = "/contact"

@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div
-  class="px-4 border-bleu border-t-4 main-image"
+  class="px-4 border-bleu border-t-4 border-b-4 main-image"
   style="background: url('{{ .Params.image }}') center center / cover no-repeat"
 >
   <div class="flex py-8 lg:mx-auto" style="max-width: 1200px;"></div>
@@ -8,7 +8,7 @@
 
 <div class="px-4 py-4">
   <div class="flex lg:mx-auto" style="max-width: 1200px;">
-    <h2 class="text-blue px-1 text-2xl font-display font-semibold">{{ .Title }}</h2>
+    <h2 class="text-blue text-2xl font-display font-semibold">{{ .Title }}</h2>
   </div>
 </div>
 
@@ -19,10 +19,24 @@
     </div>
     {{ range $tournament := .Params.tournaments }}
     <div class="flex flex-col lg:flex-row">
-      <div class="w-full lg:w-1/4 bg-blue lg:bg-white text-white lg:text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r">{{ $tournament.name }}</div>
-      <div class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r">{{ $tournament.type }}</div>
-      <div class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r">{{ $tournament.rounds }}</div>
-      <div class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b">{{ $tournament.time }}</div>
+      <div
+        class="w-full lg:w-1/4 bg-blue lg:bg-white text-white lg:text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r"
+      >
+        {{ $tournament.name }}
+      </div>
+      <div
+        class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r"
+      >
+        {{ $tournament.type }}
+      </div>
+      <div
+        class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b lg:border-r"
+      >
+        {{ $tournament.rounds }}
+      </div>
+      <div class="w-full lg:w-1/4 bg-white text-gray-800 text-center py-3 border-gray-400 border-b">
+        {{ $tournament.time }}
+      </div>
     </div>
     {{ end }}
   </div>

@@ -62,15 +62,4 @@
   .nav-menu a .menu-text {
     position: relative;
   }
-  .nav-menu a:hover .menu-text::before {
-    animation: bounceInDown 0.8s;
-    position: absolute;
-    opacity: 1;
-    transition: opacity 0.3s, transform 0.3s;
-    bottom: -6px;
-    height: 2px;
-    background: #f3615a;
-    width: 100%;
-    content: "";
-  }
 }
