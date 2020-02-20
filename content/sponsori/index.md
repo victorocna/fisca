@@ -5,7 +5,6 @@ date: 2019-12-21
 image: /images/fisca-turneu-sah-tandem.jpg
 sponsors:
   - name: Gerroma
-    description: Compania de asigurari Gerroma este sponsorul principal al festivalului FISCA de la prima editie, din anul 1999.
     image: /images/gerroma-logo.jpg
     website: https://www.gerroma.ro
   - name: Chipita
@@ -18,3 +17,5 @@ sponsors:
     image: /images/oscar-downstream-logo.jpg
     website: https://www.oscars.ro/
 ---
+
+Fiecare sponsor face diferența. Vă rugăm să luați câteva minute pentru a afla despre toți sponsorii noștri de pe această pagină dedicată. Vreți să fiți unul dintre sponsorii FISCA? Contactați organizatorii prin [formularul de contact](/contact) sau la adresa de email [contact@fisca.ro](mailto:contact@fisca.ro)

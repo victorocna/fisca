@@ -2,7 +2,7 @@
   <div class="w-full lg:mx-auto flex justify-between items-center" style="max-width: 1200px;">
     <h3 class="font-display text-sm flex-1">{{ .Site.Params.timeframe }}</h3>
     {{ range .Site.Params.icons }}
-      <a class="w-8 h-8 text-white flex justify-center items-center rounded-full bg-blue mr-1" href="{{.url}}" target="_blank">
+      <a class="w-8 h-8 text-white flex justify-center items-center rounded-full bg-blue ml-1" href="{{.url}}" target="_blank">
         <i class="{{.icon}}"></i>
       </a>
     {{ end }}

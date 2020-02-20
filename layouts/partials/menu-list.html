@@ -6,18 +6,31 @@
   </li>
   {{ range .Site.Menus.main }}
   {{ if .HasChildren }}
-  <li class="border-gray-200 px-4 border-b border-gray-200 lg:border-0 lg:font-bold hover:text-yellow">
-    <span>{{ .Name }}</span>
+  <li class="px-4 py-2 lg:py-4 lg:uppercase hover:text-yellow">
+    <div class="lg:flex lg:items-center">
+      <span>{{ .Name }}</span>
+      <div class="hidden lg:block lg:ml-1">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+
+    <ul class="submenu text-sm grid gap-6 px-4 pt-4 lg:px-8 lg:py-4">
+      {{ range .Children }}
+      {{ $target := "" }}
+      {{ if eq (substr .URL 0 4) "http" }}
+      {{ $target = "_blank" }}
+      {{ end }}
+      <li class="">
+        <a href="{{ .URL }}" class="flex items-center" target="{{$target}}">
+          <span class="text-black mr-1">{{ .Name }}</span>
+          <span class="text-bleu">{{ .Post }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
   </li>
-  <ul class="sub-menu hidden">
-    {{ range .Children }}
-    <li class="">
-      <a href="{{ .URL }}">{{ .Name }}</a>
-    </li>
-    {{ end }}
-  </ul>
   {{ else }}
-  <li class="border-gray-200 px-4 border-b border-gray-200 lg:border-0 lg:font-bold hover:text-yellow">
+  <li class="px-4 py-2 lg:py-4 lg:uppercase hover:text-yellow">
     <a href="{{.URL}}" class="block lg:inline">
       <span class="menu-text">{{ .Name }}</span>
     </a>

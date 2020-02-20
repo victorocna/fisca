@@ -1,8 +1,4 @@
 [[main]]
-  name = "Acasă"
-  url = "/"
-  weight = 100
-[[main]]
   name = "Program"
   url = "/program"
   weight = 110
@@ -11,15 +7,17 @@
   url = "/cazare"
   weight = 120
 [[main]]
-  name = "Partide LIVE"
+  name = "Live"
   identifier = "live"
   weight = 130
 [[main]]
-  name = "Partide live chess24.com"
+  name = "Live @chess24"
+  post = "<i class=\"fas fa-external-link-alt\"></i>"
   parent = "live"
   url = "#"
 [[main]]
-  name = "Partide live followchess.com"
+  name = "Live @followchess"
+  post = "<i class=\"fas fa-external-link-alt\"></i>"
   parent = "live"
   url = "#"
 [[main]]
@@ -31,24 +29,29 @@
   identifier = "rezultate"
   weight = 140
 [[main]]
-  name = "Rezultate Turneu Piticot"
+  name = "Piticot"
   parent = "rezultate"
+  post = "<i class=\"fas fa-external-link-alt\"></i>"
   url = "https://chess-results.com/tnr443096.aspx"
 [[main]]
-  name = "Rezultate Turneu A"
+  name = "Turneu A"
   parent = "rezultate"
+  post = "<i class=\"fas fa-external-link-alt\"></i>"
   url = "https://chess-results.com/tnr443092.aspx"
 [[main]]
-  name = "Rezultate Turneu B"
+  name = "Turneu B"
   parent = "rezultate"
+  post = "<i class=\"fas fa-external-link-alt\"></i>"
   url = "https://chess-results.com/tnr443093.aspx"
 [[main]]
-  name = "Rezultate Turneu C"
+  name = "Turneu C"
   parent = "rezultate"
+  post = "<i class=\"fas fa-external-link-alt\"></i>"
   url = "https://chess-results.com/tnr443094.aspx"
 [[main]]
-  name = "Rezultate Turneu D"
+  name = "Turneu D"
   parent = "rezultate"
+  post = "<i class=\"fas fa-external-link-alt\"></i>"
   url = "https://chess-results.com/tnr443095.aspx"
 [[main]]
   name = "Contact"

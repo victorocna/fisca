@@ -113,3 +113,9 @@ html {
     height: 450px;
   }
 }
+
+.move-up:hover {
+  transform: translateY(-3px);
+  transition: all 0.15s ease-in;
+  @apply shadow-lg;
+}
