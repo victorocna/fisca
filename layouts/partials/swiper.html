@@ -1,0 +1,30 @@
+<div class="content swiper-container w-full h-64 lg:h-screen">
+  <div class="swiper-wrapper flex align-center text-gray-600 mb-4">
+    {{ range .Params.slider }}
+    <div class="swiper-slide">
+      <img class="object-cover w-full h-64 lg:h-screen" src="{{ .image }}" alt="{{ .text }}" />
+      <div class="swiper-text absolute bottom-0 text-white text-sm w-full px-4 py-2">
+        {{ .text }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script src="https://unpkg.com/swiper@5.0.4/js/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper(".swiper-container", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false
+    }
+  });
+</script>

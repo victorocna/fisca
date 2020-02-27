@@ -1,0 +1,14 @@
+<div class="grid gap-4 grid-cols-2 lg:grid-cols-4">
+  {{ range .Site.Params.sponsors }}
+  <div class="move-up bg-white p-4 border border-gray-400 rounded-lg flex flex-col items-center">
+    <img src="{{.image}}" alt="{{.name}}" class="h-16 mb-2" />
+    <a
+      class="text-xs px-4 py-1 rounded-full border-2 border-bleu hover:bg-bleu hover:text-white"
+      href="{{.website}}"
+      target="_blank"
+      rel="nofollow noreferrer"
+      >Către website</a
+    >
+  </div>
+  {{ end }}
+</div>

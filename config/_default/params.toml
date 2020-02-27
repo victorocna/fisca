@@ -16,16 +16,20 @@ fontAwesome = true
   url = "/inscriere"
 [[sponsors]]
   name = "Gerroma"
-  image = "/images/gerroma-logo.jpg"
+  image = "/sponsori/gerroma-logo.jpg"
+  website = "https://www.gerroma.ro"
 [[sponsors]]
   name = "Chipita"
-  image = "/images/chipita-logo.jpg"
+  image = "/sponsori/chipita-logo.jpg"
+  website = "https://www.chipita.com"
 [[sponsors]]
   name = "Raiffeisen Bank"
-  image = "/images/raiffeisen-bank-logo.jpg"
+  image = "/sponsori/raiffeisen-bank-logo.jpg"
+  website = "https://www.raiffeisen.ro/"
 [[sponsors]]
   name = "Oscar Downstream"
-  image = "/images/oscar-downstream-logo.jpg"
+  image = "/sponsori/oscar-downstream-logo.jpg"
+  website = "https://www.oscars.ro/"
 [[icons]]
   icon = "fab fa-facebook-f"
   url = "https://www.facebook.com/FISCA.Romania/"

@@ -1,23 +1,47 @@
 {{ define "main" }}
-<article
-  class="py-4 px-6 h-screen text-center text-gray-700 text-white flex flex-col items-center justify-center"
-  style="background: url(/images/fisca-wallpaper.jpg) center center / cover no-repeat;"
->
-  <div class="flex flex-col fadeInRight animate-me delay-me">
-    <h2 class="text-2xl lg:text-4xl font-light font-display">
-      <span class="bg-white text-black p-1">{{ .Site.Params.description }}</span>
+<div class="py-4 px-6 text-center bg-blue text-white flex flex-col items-center justify-center">
+  <div class="flex flex-col font-display mb-4">
+    <h2 class="text-2xl lg:text-4xl font-light mb-2">
+      {{ .Site.Params.description }}
     </h2>
-    <h3 class="text-2xl lg:text-4xl mt-4 font-display">
-      <span class="bg-white text-black p-1">{{ .Site.Params.timeframe }}</span>
+    <h3 class="text-xs lg:text-lg mb-2">{{ .Params.teaser }}</h3>
+    <h3 class="text-xl lg:text-4xl">
+      {{ .Site.Params.timeframe }}
     </h3>
   </div>
 
-  <div class="flex flex-col lg:flex-row fadeInRight animate-me delay-me my-8 lg:my-12">
+  <div class="flex">
     {{ range .Params.Buttons }}
-    <a href="{{.url}}" class="bg-yellow rounded-full text-black text-sm lg:text-lg tracking-wide bg-green py-2 px-4 mb-4 lg:mr-4">
+    <a href="{{.url}}" target="{{.target}}" class="button border border-white rounded-full text-white text-sm lg:text-lg tracking-wide bg-green py-2 px-4 mb-4 mr-2">
       <span>{{ .name }}</span>
+      <i class="{{ .icon }}"></i>
     </a>
     {{ end }}
   </div>
-</article>
+</div>
+
+{{ partial "swiper.html" . }}
+
+<div class="p-4">
+  <div class="flex flex-col lg:mx-auto" style="max-width: 1200px;">
+    <h3 class="text-blue text-2xl text-center lg:text-3xl font-display font-semibold mb-4">Noutăți</h3>
+    {{ partial "blog.html" . }}
+    <div class="my-4 text-center">
+      <a href="#" class="button border border-blue rounded-full px-3 py-2 text-sm">
+        <span>Mai multe noutăți</span>
+        <i class="fas fa-angle-double-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+{{ partial "highlights.html" . }}
+
+<div class="p-4">
+  <div class="flex flex-col lg:mx-auto" style="max-width: 1200px;">
+    <h3 class="text-blue text-2xl text-center lg:text-3xl font-display font-semibold mb-4">Sponsori</h3>
+    {{ partial "sponsori.html" . }}
+  </div>
+</div>
+
 {{ end }}

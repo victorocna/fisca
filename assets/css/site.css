@@ -119,3 +119,42 @@ html {
   transition: all 0.15s ease-in;
   @apply shadow-lg;
 }
+
+.home-items {
+  min-height: 24rem;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .home-items {
+    min-height: 36rem;
+  }
+}
+.home-items:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #283891;
+  background-size: contain;
+  opacity: 0.7;
+  transition: 0.5s all ease;
+}
+.home-items:nth-child(2):before {
+  background: #222;
+}
+
+.button {
+  transition: all 0.5s ease;
+}
+.button:hover {
+  background-color: #f89d35;
+  border-color: #f89d35;
+  color: #fff;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
