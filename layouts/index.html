@@ -4,8 +4,7 @@
     <h2 class="text-2xl lg:text-4xl font-light mb-2">
       {{ .Site.Params.description }}
     </h2>
-    <h3 class="text-xs lg:text-lg mb-2">{{ .Params.teaser }}</h3>
-    <h3 class="text-xl lg:text-4xl">
+    <h3 class="text-xl lg:text-3xl">
       {{ .Site.Params.timeframe }}
     </h3>
   </div>
@@ -25,9 +24,15 @@
 <div class="p-4">
   <div class="flex flex-col lg:mx-auto" style="max-width: 1200px;">
     <h3 class="text-blue text-2xl text-center lg:text-3xl font-display font-semibold mb-4">Noutăți</h3>
-    {{ partial "blog.html" . }}
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mb-4">
+      {{ range where .Pages "Section" "noutati" }}
+        {{ range first 4 .Pages }}
+          {{ partial "noutati.html" . }}
+        {{ end }}
+      {{ end }}
+    </div>
     <div class="my-4 text-center">
-      <a href="#" class="button border border-blue rounded-full px-3 py-2 text-sm">
+      <a href="/noutati" class="button border border-blue rounded-full px-3 py-2 text-sm">
         <span>Mai multe noutăți</span>
         <i class="fas fa-angle-double-right"></i>
       </a>

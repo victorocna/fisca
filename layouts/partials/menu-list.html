@@ -8,7 +8,9 @@
   {{ if .HasChildren }}
   <li class="px-4 py-2 lg:py-4 lg:uppercase hover:text-yellow">
     <div class="lg:flex lg:items-center">
-      <span>{{ .Name }}</span>
+      <a href="{{.URL}}" class="block lg:inline">
+        <span class="menu-text">{{ .Name }}</span>
+      </a>
       <div class="hidden lg:block lg:ml-1">
         <i class="fas fa-chevron-down"></i>
       </div>

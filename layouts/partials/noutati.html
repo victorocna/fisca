@@ -1,0 +1,25 @@
+<article class="move-up bg-white p-4 border border-gray-400 rounded-lg flex flex-col">
+  <h4 class="text-blue text-lg font-semibold mb-2">
+    <a href="{{ .Permalink }}" class="hover:underline">{{- .Title -}}</a>
+  </h4>
+  <div class="mb-4 text-sm flex items-center">
+    {{ if .Date }}
+    <i class="far fa-calendar-alt"></i>
+    <div class="ml-1 mr-2">{{ .Date.Format "2006-01-02" }}</div>
+    {{ end }}
+
+    {{ if .Params.author }}
+    <i class="fas fa-user"></i>
+    <div class="ml-1 mr-2">{{ .Params.author }}</div>
+    {{ end }}
+  </div>
+  <div class="content text-sm text-gray-700 flex-1">
+    {{- .Summary -}}
+  </div>
+  <div class="my-4">
+    <a href="{{ .Permalink }}" class="button border border-blue rounded-full px-3 py-2 text-sm">
+      <span>Mai mult</span>
+      <i class="fas fa-angle-double-right"></i>
+    </a>
+  </div>
+</article>

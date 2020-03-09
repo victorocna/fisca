@@ -1,14 +1,52 @@
 [[main]]
-  name = "Program"
-  url = "/program"
+  name = "Festival"
+  identifier = "festival"
+  url = "/"
   weight = 110
 [[main]]
+  name = "Activități"
+  parent = "festival"
+  url = "/activitati"
+[[main]]
+  name = "Program"
+  parent = "festival"
+  url = "/program"
+[[main]]
   name = "Cazare"
+  parent = "festival"
   url = "/cazare"
+[[main]]
+  name = "Premii"
+  parent = "festival"
+  url = "/premii"
+[[main]]
+  name = "Contact"
+  parent = "festival"
+  url = "/contact"
+[[main]]
+  name = "Regulamente"
+  parent = "festival"
+  url = "/regulamente"
+[[main]]
+  name = "Noutăți"
+  url = "/noutati"
   weight = 120
+[[main]]
+  name = "Media"
+  identifier = "media"
+  weight = 125
+[[main]]
+  name = "Albume foto"
+  parent = "media"
+  url = "/albume-foto"
+[[main]]
+  name = "Video"
+  parent = "media"
+  url = "/video"
 [[main]]
   name = "Live"
   identifier = "live"
+  url = "/live"
   weight = 130
 [[main]]
   name = "Live @chess24"
@@ -27,6 +65,7 @@
 [[main]]
   name = "Rezultate"
   identifier = "rezultate"
+  url = "/rezultate"
   weight = 140
 [[main]]
   name = "Piticot"
@@ -53,7 +92,3 @@
   parent = "rezultate"
   post = "<i class=\"fas fa-external-link-alt\"></i>"
   url = "https://chess-results.com/tnr443095.aspx"
-[[main]]
-  name = "Contact"
-  url = "/contact"
-  weight = 160

@@ -24,8 +24,6 @@ highlights:
     button: Vezi programul
     href: "/program"
 slider:
-  - image: /images/fisca-petrecerea-piratilor.jpg
-    text: FISCA 2018 - Petrecerea piraților
   - image: /images/fisca-festivitate-premiere.jpg
     text: FISCA 2018 - Festivitatea de premiere
   - image: /images/fisca-emotii-in-fata-tablei-de-sah.jpg
@@ -34,4 +32,6 @@ slider:
     text: Sute de premii în bani și obiecte la cele 5 turnee principale ale FISCA
   - image: /images/fisca-rezultate.jpg
     text: Peste 1.000 de participanți fericiți vin la FISCA în fiecare an
+  - image: /images/fisca-petrecerea-piratilor.jpg
+    text: FISCA 2018 - Petrecerea piraților
 ---

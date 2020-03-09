@@ -1,6 +1,7 @@
 author = "Victor Ocnarescu"
 sitename = "Fisca"
 timeframe = "19 - 28 iunie 2020"
+phone = "+40723574212"
 description = "Festivalul Internațional de Șah Cap Aurora"
 image = "/logo/fisca-wallpaper.jpg"
 favicon = "/favicon/favicon.png"
@@ -36,3 +37,6 @@ fontAwesome = true
 [[icons]]
   icon = "fab fa-instagram"
   url = "https://www.instagram.com/fisca_chess/"
+[[icons]]
+  icon = "fas fa-map-marker-alt"
+  url = "https://goo.gl/maps/ZwHa9ezU1CFK8enB7"
