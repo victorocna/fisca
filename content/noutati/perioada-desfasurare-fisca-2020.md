@@ -1,5 +1,6 @@
 ---
 title: Perioada desfășurare FISCA 2020
+aside: true
 date: 2020-02-05
 author: Mariana Ioniță
 ---

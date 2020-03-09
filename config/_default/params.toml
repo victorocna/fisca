@@ -6,6 +6,7 @@ description = "Festivalul Internațional de Șah Cap Aurora"
 image = "/logo/fisca-wallpaper.jpg"
 favicon = "/favicon/favicon.png"
 analytics = "UA-29967399-1"
+readMore = "Mai mult"
 fontAwesome = true
 [fonts]
   display = "'Libre Baskerville', serif"

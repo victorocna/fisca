@@ -27,7 +27,7 @@
     <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mb-4">
       {{ range where .Pages "Section" "noutati" }}
         {{ range first 4 .Pages }}
-          {{ partial "noutati.html" . }}
+          {{ partial "single.html" . }}
         {{ end }}
       {{ end }}
     </div>

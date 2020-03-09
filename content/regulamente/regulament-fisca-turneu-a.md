@@ -1,4 +1,12 @@
 ---
 title: Regulament FISCA Turneu A
+aside: true
 date: 2020-03-09
+author: Mariana Ioniță
 ---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et. Pellentesque diam volutpat commodo sed egestas egestas. Amet purus gravida quis blandit turpis. Sit amet justo donec enim diam vulputate ut pharetra sit. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Gravida arcu ac tortor dignissim convallis aenean. Dui faucibus in ornare quam viverra orci sagittis. Mollis aliquam ut porttitor leo a. Sit amet volutpat consequat mauris nunc congue. In hac habitasse platea dictumst vestibulum rhoncus. A lacus vestibulum sed arcu non. Porta lorem mollis aliquam ut porttitor. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Est ullamcorper eget nulla facilisi etiam. Nulla pellentesque dignissim enim sit. Amet massa vitae tortor condimentum lacinia quis vel eros donec.
+
+Quam quisque id diam vel quam elementum pulvinar etiam. Amet dictum sit amet justo. Nulla facilisi etiam dignissim diam quis. Consequat id porta nibh venenatis. Rhoncus dolor purus non enim praesent elementum facilisis. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque. Suspendisse faucibus interdum posuere lorem ipsum. Eget mauris pharetra et ultrices neque. Tincidunt augue interdum velit euismod. Congue nisi vitae suscipit tellus mauris a diam maecenas. Duis ut diam quam nulla porttitor. Duis at tellus at urna condimentum.
+
+Lorem mollis aliquam ut porttitor leo. Nec feugiat nisl pretium fusce id velit ut tortor pretium. Vulputate mi sit amet mauris commodo quis imperdiet massa. Platea dictumst vestibulum rhoncus est pellentesque elit. Libero enim sed faucibus turpis in eu mi. Leo in vitae turpis massa sed elementum tempus egestas. At urna condimentum mattis pellentesque id. Facilisis gravida neque convallis a cras semper. Tellus in metus vulputate eu. Velit ut tortor pretium viverra suspendisse. Lectus quam id leo in. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Viverra nibh cras pulvinar mattis nunc sed blandit. Aenean pharetra magna ac placerat. Auctor neque vitae tempus quam pellentesque nec nam.

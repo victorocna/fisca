@@ -1,5 +1,6 @@
 ---
 title: 100 jucători înscriși la sfârșitul lunii februarie
+aside: true
 date: 2020-02-27
 author: Mariana Ioniță
 ---

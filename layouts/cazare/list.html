@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="px-4 py-4">
+  <div class="flex flex-col lg:mx-auto" style="max-width: 1200px;">
+    <h2 class="text-blue text-2xl font-display font-semibold mb-4">{{ .Title }}</h2>
+
+    <div class="grid grid-table grid-table-4 lg:grid-cols-4 mb-8">
+      <div class="font-semibold hidden lg:block">Hotel</div>
+      <div class="font-semibold hidden lg:block">Tip cameră</div>
+      <div class="font-semibold hidden lg:block">Preț</div>
+      <div class="font-semibold hidden lg:block">Masă</div>
+
+      {{ range .Pages }}
+        {{ $title := .Title }}
+        {{ range $item := .Params.prices }}
+          <div>{{ $title }}</div>
+          <div>{{ $item.type }}</div>
+          <div>{{ $item.price }}</div>
+          <div>{{ $item.meal }}</div>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mb-4">
+      {{ range .Pages }}
+        {{ partial "single.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

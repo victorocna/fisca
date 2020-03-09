@@ -8,9 +8,9 @@
   parent = "festival"
   url = "/activitati"
 [[main]]
-  name = "Program"
+  name = "Turnee"
   parent = "festival"
-  url = "/program"
+  url = "/turnee"
 [[main]]
   name = "Cazare"
   parent = "festival"

@@ -1,0 +1,6 @@
+{{ $default := "/images/fisca-turneu-sah-tandem.jpg" }}
+{{ $image := .Params.image | default $default }}
+
+<div class="border-bleu border-t-4 border-b-4">
+  <img src="{{ $image }}" alt="{{ .Title }}" class="object-cover w-full main-image" />
+</div>

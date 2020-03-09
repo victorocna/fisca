@@ -1,10 +1,5 @@
 {{ define "main" }}
-<div
-  class="px-4 border-bleu border-t-4 border-b-4 main-image"
-  style="background: url('{{ .Params.image }}') center center / cover no-repeat"
->
-  <div class="flex py-8 lg:mx-auto" style="max-width: 1200px;"></div>
-</div>
+{{ partial "cover.html" . }}
 
 <div class="px-4 py-4">
   <div class="flex lg:mx-auto" style="max-width: 1200px;">

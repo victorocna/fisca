@@ -1,0 +1,60 @@
+<article class="bg-white border border-gray-400 rounded-lg flex flex-col">
+  {{ if .Params.image }}
+    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="object-cover h-48 rounded-t-lg" />
+  {{ end }}
+  <div class="p-4">
+    <h4 class="text-blue text-lg font-semibold mb-2">
+      <a href="{{ .Permalink }}" class="hover:underline">{{- .Title -}}</a>
+    </h4>
+    <div class="mb-4 text-sm grid gap-2">
+      {{ if .Params.Type }}
+      <div class="flex items-center">
+        <div class="text-lg text-green-800 w-6 h-6 flex items-center">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div>{{ .Params.Type }}</div>
+      </div>
+      {{ end }}
+
+      {{ if .Params.time }}
+      <div class="flex items-center">
+        <div class="text-lg text-green-800 w-6 h-6 flex items-center">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div>Timp de joc: {{ .Params.time }}</div>
+      </div>
+      {{ end }}
+
+      {{ if .Params.address }}
+      <div class="flex items-center">
+        <div class="text-lg text-green-800 w-6 h-6 flex items-center">
+          <i class="fas fa-directions"></i>
+        </div>
+        <div>Sala de joc: {{ .Params.address }}</div>
+      </div>
+      {{ end }}
+
+      {{ if .Params.results }}
+      <div class="flex items-center">
+        <div class="text-lg text-green-800 w-6 h-6 flex items-center">
+          <i class="fas fa-external-link-alt"></i>
+        </div>
+        <div>
+          <a href="{{ .Params.results }}" target="_blank" class="hover:underline">Rezultate</a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="content text-sm text-gray-700 flex-1">
+      <div class="grid grid-table-2 grid-cols-3 gap-4 lg:gap-2 items-center mb-4">
+      {{ range $item := .Params.schedule }}
+        <div class="lg:flex">
+          <div class="lg:mr-1">{{ $item.day }}</div>
+          <strong>{{ $item.date }}</strong>
+        </div>
+        <div class="col-span-2">{{ $item.description }}</div>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</article>

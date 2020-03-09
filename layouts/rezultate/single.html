@@ -1,9 +1,5 @@
 {{ define "main" }}
-<div class="px-4 py-20" style="background: url('{{ .Params.image }}') center center / cover no-repeat">
-  <div class="flex py-8 lg:mx-auto" style="max-width: 1200px;">
-    <h2 class="bg-white px-1 text-2xl font-display font-semibold">{{ .Title }}</h2>
-  </div>
-</div>
+{{ partial "cover.html" . }}
 
 <div class="px-4 py-8">
   <div class="lg:flex lg:flex-col lg:mx-auto" style="max-width: 1200px;">
