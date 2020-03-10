@@ -1,4 +1,3 @@
 ---
 title: Noutăți
-hideFromAdmin: true
 ---

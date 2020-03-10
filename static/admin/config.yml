@@ -27,9 +27,6 @@ collections:
   - name: noutati
     label: Noutăți
     folder: content/noutati
-    filter:
-      - field: hideFromAdmin
-        value: false
     create: true
     slug: "{{slug}}"
     editor:
@@ -47,9 +44,6 @@ collections:
         widget: date
       - label: Author
         name: author
-        widget: string
-      - label: Language
-        name: language
         widget: string
       - label: Body
         name: body
