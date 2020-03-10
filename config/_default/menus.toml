@@ -16,10 +16,6 @@
   parent = "festival"
   url = "/cazare"
 [[main]]
-  name = "Premii"
-  parent = "festival"
-  url = "/premii"
-[[main]]
   name = "Contact"
   parent = "festival"
   url = "/contact"
