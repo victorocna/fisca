@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: git-gateway
 media_folder: static/images
 public_folder: /images
 logo_url: /logo/fisca-logo-admin.png
