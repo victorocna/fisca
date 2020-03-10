@@ -1,7 +1,7 @@
 ---
-title: Regulament FISCA Open internațional
+title: Regulament FISCA Open - Turneul D
 aside: true
-date: 2020-03-09
+date: 2020-03-09T00:00:00.000Z
 author: Mariana Ioniță
 ---
 
