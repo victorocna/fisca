@@ -32,17 +32,9 @@
   url = "/noutati"
   weight = 120
 [[main]]
-  name = "Media"
-  identifier = "media"
-  weight = 125
-[[main]]
   name = "Albume foto"
-  parent = "media"
   url = "/albume-foto"
-[[main]]
-  name = "Video"
-  parent = "media"
-  url = "/video"
+  weight = 125
 [[main]]
   name = "Live"
   identifier = "live"

@@ -4,11 +4,7 @@
   {{ end }}
   <div class="p-4">
     <h4 class="text-blue text-lg font-semibold mb-2">
-      {{ if eq .Section "cazare" }}
-      <span>{{- .Title -}}</span>
-      {{ else }}
       <a href="{{ .Permalink }}" class="hover:underline">{{- .Title -}}</a>
-      {{ end }}
     </h4>
     <div class="mb-4 text-sm flex items-center">
       {{ if .Date }}
@@ -33,13 +29,11 @@
     <div class="content text-sm text-gray-700 flex-1">
       {{- .Summary -}}
     </div>
-    {{ if ne .Section "cazare" }}
     <div class="my-4">
       <a href="{{ .Permalink }}" class="button border border-blue rounded-full px-3 py-2 text-sm">
         <span>{{ .Site.Params.readMore }}</span>
         <i class="fas fa-angle-double-right"></i>
       </a>
     </div>
-    {{ end }}
   </div>
 </article>

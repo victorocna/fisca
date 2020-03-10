@@ -15,14 +15,14 @@ highlights:
   - title: Fotografii FISCA
     background: /images/fisca-turneu-sah-tandem.jpg
     image: /icons/king.png
-    button: Vezi albumele foto
-    href: "https://www.facebook.com/pg/FISCA.Romania/photos/"
+    button: Spre albumele foto
+    href: "/albume-foto"
     target: _blank
-  - title: Programul FISCA 2020
+  - title: Turnee FISCA 2020
     background: /images/fisca-participanti-fericiti.jpg
     image: /icons/queen.png
-    button: Vezi programul
-    href: "/program"
+    button: Spre turnee
+    href: "/turnee"
 slider:
   - image: /images/fisca-festivitate-premiere.jpg
     text: FISCA 2018 - Festivitatea de premiere
