@@ -4,29 +4,56 @@ media_folder: static/images
 public_folder: /images
 logo_url: /logo/fisca-logo-admin.png
 collections:
-  - name: pages
-    label: Pages
-    files:
-      - name: partide-live
-        label: Partide live
-        file: content/partide-live/index.md
+  - name: albume-foto
+    label: Albume foto
+    folder: content/albume-foto
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Date
+        name: date
+        widget: date
+      - label: Image
+        name: image
+        widget: image
+      - label: Link
+        name: link
+        widget: string
+  - name: cazare
+    label: Cazare
+    folder: content/cazare
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Show in category list
+        name: aside
+        widget: boolean
+        default: true
+      - label: Image
+        name: image
+        widget: image
+      - label: Prices
+        name: prices
+        widget: object
         fields:
-          - label: Title
-            name: title
+          - label: Room Type
+            name: type
             widget: string
-          - label: Editions
-            name: editions
-            widget: list
-            fields:
-              - label: Year
-                name: year
-                widget: string
-              - label: url
-                name: url
-                widget: string
-          - label: Body
-            name: body
-            widget: markdown
+          - label: Room prices
+            name: prices
+            widget: string
+          - label: Meal details
+            name: meal
+            widget: string
+      - label: Body
+        name: body
+        widget: markdown
   - name: settings
     label: Settings
     editor:
@@ -34,23 +61,21 @@ collections:
     files:
       - name: settings
         label: Update your website settings by clicking here
-        file: config.toml
+        file: config/_default/params.toml
         fields:
-          - widget: string
-            name: title
-            label: Title
+          - label: Sitename
+            name: sitename
+            widget: string
             required: true
-            hint: Site title
-          - widget: object
-            name: params
-            label: Params
+          - label: Timeframe
+            name: timeframe
+            widget: string
             required: true
-            hint: Site parameters
-            fields:
-              - widget: string
-                name: analytics
-                label: Google Analytics Code
-                required: false
+          - label: Phone number
+            name: phone
+            widget: string
+            required: true
+            hint: Phone number to display in the topbar
   - name: menu
     label: Menus
     editor:
@@ -58,7 +83,7 @@ collections:
     files:
       - name: menu
         label: Update your website menu by clicking here
-        file: config.toml
+        file: config/_default/menus.toml
         fields:
           - widget: object
             name: menu

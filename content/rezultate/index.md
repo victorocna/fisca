@@ -2,7 +2,7 @@
 title: Rezultate
 type: rezultate
 date: 2019-12-21
-image: /images/fisca-rezultate.jpg
+image: /images/fisca-piese-de-sah-closeup.jpg
 tournaments:
   - name: Turneul Piticot
     url: https://chess-results.com/tnr443096.aspx

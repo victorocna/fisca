@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<div class="px-4 py-4">
+  <div class="flex flex-col lg:mx-auto" style="max-width: 1200px;">
+    <h2 class="text-blue text-2xl font-display font-semibold mb-4">{{ .Title }}</h2>
+
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-4">
+      {{ range .Pages }}
+      <article
+        class="album-foto"
+        style="background: url('{{.Params.image}}') no-repeat center center / cover"
+      >
+        <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-4">
+          <h3 class="font-display mb-4 text-xl text-white text-center">{{.Title}}</h3>
+          <a
+            class="bg-yellow border border-white text-white rounded-full text-sm px-3 py-2"
+            href="{{.Params.link}}"
+            target="_blank"
+          >
+            <span>Album foto</span>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

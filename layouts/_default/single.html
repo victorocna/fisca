@@ -4,7 +4,7 @@
 {{ $image := .Params.image | default $default }}
 
 <div class="border-bleu border-t-4 border-b-4">
-  <img src="{{ $image }}" alt="{{ .Title }}" class="object-cover h-64 w-full" />
+  <img src="{{ $image }}" alt="{{ .Title }}" class="object-cover h-64 w-full main-image" />
 </div>
 
 <div class="grid lg:grid-cols-3 gap-4 lg:mx-auto my-8 px-4 lg:px-0" style="max-width: 1200px;">
