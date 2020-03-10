@@ -13,10 +13,6 @@ fontAwesome = true
   display = "'Libre Baskerville', serif"
   body = "'Open Sans', sans-serif"
   url = "https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans&display=swap"
-[teaser]
-  text = "Vrei să participi la unul dintre cele mai frumoase festivaluri de șah din România?"
-  button = "Înscrie-te acum!"
-  url = "/inscriere"
 [[sponsors]]
   name = "Gerroma"
   image = "/sponsori/gerroma-logo.jpg"

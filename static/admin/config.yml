@@ -9,6 +9,8 @@ collections:
     folder: content/albume-foto
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - label: Title
         name: title
@@ -22,11 +24,61 @@ collections:
       - label: Link
         name: link
         widget: string
+  - name: noutati
+    label: Noutăți
+    folder: content/noutati
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Show in category list
+        name: aside
+        widget: boolean
+        default: true
+      - label: Date
+        name: date
+        widget: date
+      - label: Author
+        name: author
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+  - name: regulamente
+    label: Regulamente
+    folder: content/regulamente
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Show in category list
+        name: aside
+        widget: boolean
+        default: true
+      - label: Date
+        name: date
+        widget: date
+      - label: Author
+        name: author
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
   - name: cazare
     label: Cazare
     folder: content/cazare
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - label: Title
         name: title
@@ -63,10 +115,6 @@ collections:
         label: Update your website settings by clicking here
         file: config/_default/params.toml
         fields:
-          - label: Sitename
-            name: sitename
-            widget: string
-            required: true
           - label: Timeframe
             name: timeframe
             widget: string
@@ -76,6 +124,29 @@ collections:
             widget: string
             required: true
             hint: Phone number to display in the topbar
+          - label: Sponsori
+            name: sponsors
+            widget: list
+            fields:
+              - label: Sponsor name
+                name: name
+                widget: string
+              - label: Logo
+                name: image
+                widget: image
+              - label: Website
+                name: website
+                widget: string
+          - label: Topbar Icons
+            name: icons
+            widget: list
+            fields:
+              - label: FontAwesome icon
+                name: icon
+                widget: string
+              - label: URL
+                name: url
+                widget: string
   - name: menu
     label: Menus
     editor:
@@ -85,30 +156,27 @@ collections:
         label: Update your website menu by clicking here
         file: config/_default/menus.toml
         fields:
-          - widget: object
-            name: menu
-            label: Site Menus
-            required: false
-            hint: Menu items not related to a specific page
+          - label: Site Menus
+            name: main
+            widget: list
             fields:
-              - widget: list
-                name: main
-                label: Main menu
-                required: false
-                hint: List of items for Main menu
-                fields:
-                  - widget: string
-                    name: name
-                    label: Menu text
-                    required: true
-                  - widget: string
-                    name: url
-                    label: Menu link
-                    required: true
-                  - widget: number
-                    name: weight
-                    label: Menu weight
-                    required: true
-                    hint: >-
-                      A menu item is more important (placed more to the left)
-                      if its weight is smaller
+              - label: Menu text
+                name: name
+                widget: string
+                required: true
+              - label: Menu link
+                name: url
+                widget: string
+                required: true
+              - label: Menu weight
+                name: weight
+                widget: number
+                hint: Optional. The menu item is more important (placed more to the left) if its weight is smaller
+              - label: Menu identifier
+                name: identifier
+                widget: string
+                hint: Only for parent menu items
+              - label: Menu parent
+                name: parent
+                widget: string
+                hint: Only for submenu items
