@@ -1,17 +1,86 @@
 <form id="contact-form" method="POST" class="mb-4">
-  <input type="text" name="name" aria-label="Name"
+  <input
+    type="text"
+    name="name"
+    aria-label="Name"
     class="w-full px-4 py-2 mb-4 border border-gray-500 text-gray-800 focus:text-gray-900 focus:border-green-500"
-    placeholder="Nume și prenume" required />
-  <input type="email" name="from" aria-label="Email"
+    placeholder="Nume și prenume"
+    required
+  />
+  <input
+    type="email"
+    name="from"
+    aria-label="Email"
     class="w-full px-4 py-2 mb-4 border border-gray-500 text-gray-800 focus:text-gray-900 focus:border-green-500"
-    placeholder="Adresă de email" required />
-  <textarea name="message" aria-label="Message"
+    placeholder="Adresă de email"
+    required
+  />
+  <textarea
+    name="message"
+    aria-label="Message"
     class="w-full px-4 py-2 mb-4 border border-gray-500 text-gray-800 focus:text-gray-900 focus:border-green-500"
-    rows="3" placeholder="Mesaj"></textarea>
+    rows="3"
+    placeholder="Mesaj"
+  ></textarea>
   <input type="text" name="ascuns" id="ascuns" class="hidden" />
   <div class="flex flex-row items-center">
-    <button id="submit" type="submit" class="bg-blue text-white text-base py-2 px-4 mr-4" style="min-width: 140px">Trimite</button>
-    <div id="success" class="hidden text-green text-sm">Mesajul a fost trimis cu succes. Vă mulțumim!</div>
-    <div id="error" class="hidden text-blue text-sm">A apărut o eroare în trimiterea mesajului. Te rugăm să încerci din nou</div>
+    <button
+      id="submit"
+      type="submit"
+      class="bg-blue text-white text-base py-2 px-4 mr-4"
+      style="min-width: 140px"
+    >
+      Trimite
+    </button>
+    <div id="success" class="hidden text-green text-sm">
+      Mesajul a fost trimis cu succes. Vă mulțumim!
+    </div>
+    <div id="error" class="hidden text-blue text-sm">
+      A apărut o eroare în trimiterea mesajului. Te rugăm să încerci din nou
+    </div>
   </div>
 </form>
+
+<script type="text/javascript">
+  window.addEventListener("load", function() {
+    function sendData() {
+      const XHR = new XMLHttpRequest();
+
+      // Bind the FormData object and the form element
+      const formData = new FormData(document.getElementById("contact-form"));
+      const jsonData = JSON.stringify(Object.fromEntries(formData));
+
+      XHR.addEventListener("loadstart", function(event) {
+        document.getElementById("submit").disabled = "disabled";
+        document.getElementById("submit").classList.add("opacity-50", "cursor-not-allowed");
+      });
+      XHR.addEventListener("load", function(event) {
+        document.getElementById("success").classList.remove("hidden");
+      });
+      XHR.addEventListener("error", function(event) {
+        document.getElementById("error").classList.remove("hidden");
+      });
+
+      // Check for honeypot
+      if (document.getElementById("ascuns").value) {
+        return false;
+      }
+
+      // Set up our request
+      if (!~"{{ .Site.BaseURL | absURL }}".indexOf("localhost")) {
+        XHR.open("POST", "{{ .Site.BaseURL | absURL }}/.netlify/functions/contact-form");
+        XHR.send(jsonData);
+      }
+    }
+
+    // Access the form element...
+    let form = document.getElementById("contact-form");
+
+    // ...and take over its submit event.
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      sendData();
+    });
+  });
+</script>
