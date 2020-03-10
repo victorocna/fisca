@@ -6,7 +6,7 @@
   </li>
   {{ range .Site.Menus.main }}
   {{ if .HasChildren }}
-  <li class="px-4 py-2 lg:py-4 lg:uppercase hover:text-yellow">
+  <li class="px-4 py-2 lg:py-4 lg:font-semibold lg:text-md lg:tracking-wide hover:text-yellow">
     <div class="lg:flex lg:items-center">
       <a href="{{.URL}}" class="block lg:inline">
         <span class="menu-text">{{ .Name }}</span>
@@ -16,13 +16,13 @@
       </div>
     </div>
 
-    <ul class="submenu text-sm grid gap-6 px-4 pt-4 lg:px-8 lg:py-4">
+    <ul class="submenu text-sm grid gap-6 px-4 pt-4 lg:px-8 lg:py-4 lg:shadow-lg">
       {{ range .Children }}
       {{ $target := "" }}
       {{ if eq (substr .URL 0 4) "http" }}
       {{ $target = "_blank" }}
       {{ end }}
-      <li class="">
+      <li>
         <a href="{{ .URL }}" class="flex items-center" target="{{$target}}">
           <span class="text-black mr-1">{{ .Name }}</span>
           <span class="text-bleu">{{ .Post }}</span>
@@ -32,7 +32,7 @@
     </ul>
   </li>
   {{ else }}
-  <li class="px-4 py-2 lg:py-4 lg:uppercase hover:text-yellow">
+  <li class="px-4 py-2 lg:py-4 lg:font-semibold hover:text-yellow">
     <a href="{{.URL}}" class="block lg:inline">
       <span class="menu-text">{{ .Name }}</span>
     </a>

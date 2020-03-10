@@ -13,9 +13,9 @@
 
       {{ range $tournament := .Params.tournaments }}
         <div class="bg-blue text-white lg:bg-gray-200 lg:text-black">{{ $tournament.name }}</div>
-        <div class="">{{ $tournament.type }}</div>
-        <div class="">{{ $tournament.rounds }}</div>
-        <div class="">{{ $tournament.time }}</div>
+        <div>{{ $tournament.type }}</div>
+        <div>{{ $tournament.rounds }}</div>
+        <div>{{ $tournament.time }}</div>
       {{ end }}
     </div>
   </div>
