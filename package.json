@@ -26,6 +26,7 @@
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.7.5",
     "dotenv": "^8.2.0",
+    "kind-of": "^6.0.3",
     "netlify-lambda": "^1.6.3",
     "nodemailer": "^6.4.6",
     "postcss-cli": "^6.1.3",
